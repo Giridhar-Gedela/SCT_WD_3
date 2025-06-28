@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <h1 class="title">TIC TAC TOE</h1>
+        <p class="subtitle">The Ultimate Strategy Game</p>
+        
+        <div class="game-modes">
+            <button class="mode-btn active" id="twoPlayerBtn">👥 Two Players</button>
+            <button class="mode-btn" id="computerBtn">🤖 vs Computer</button>
+        </div>
+
+        <div class="game-info">
+            <div class="current-player" id="currentPlayer">Player X's Turn</div>
+        </div>
+
+        <div class="board-container">
+            <div class="board" id="board">
+                <button class="cell" data-index="0"></button>
+                <button class="cell" data-index="1"></button>
+                <button class="cell" data-index="2"></button>
+                <button class="cell" data-index="3"></button>
+                <button class="cell" data-index="4"></button>
+                <button class="cell" data-index="5"></button>
+                <button class="cell" data-index="6"></button>
+                <button class="cell" data-index="7"></button>
+                <button class="cell" data-index="8"></button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" id="resetBtn">🔄 Reset Game</button>
+            <button class="btn" id="newGameBtn">🆕 New Game</button>
+        </div>
+
+        <div class="score-section">
+            <div class="score-title">🏆 Scoreboard</div>
+            <div class="score">
+                <div class="score-item">
+                    <div class="score-label">Player X</div>
+                    <div class="score-value" id="scoreX">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">Draws</div>
+                    <div class="score-value" id="scoreDraw">0</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-label">Player O</div>
+                    <div class="score-value" id="scoreO">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle">🎉 Game Over!</h2>
+            <p id="modalMessage">Player X Wins!</p>
+            <button class="btn" id="modalBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
